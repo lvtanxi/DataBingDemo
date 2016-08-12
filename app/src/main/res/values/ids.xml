@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="common_toobar" type="id"/>
+    <item name="common_recyclerview" type="id"/>
+    <item name="common_tab_layout" type="id"/>
+    <item name="common_view_pager" type="id"/>
+</resources>

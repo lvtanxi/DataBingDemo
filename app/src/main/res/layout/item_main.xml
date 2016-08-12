@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="android.text.TextUtils"/>
+        <variable
+            name="mainItem"
+            type="String"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="80dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{TextUtils.equals("asdfasdf",mainItem)?"yyyyy":"xxxxx"}'/>
+
+    </RelativeLayout>
+
+</layout>
