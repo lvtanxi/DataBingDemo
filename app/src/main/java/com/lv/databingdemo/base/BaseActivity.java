@@ -23,9 +23,12 @@ public abstract class BaseActivity<DT extends ViewDataBinding> extends AppCompat
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mBinding= DataBindingUtil.setContentView(this, loadLayoutId());
         bindToolbar();
-        bindListener();
+        initData();
         processLogic();
     }
+
+
+
     /**
      * 为Activity加载布局文件
      */
@@ -37,12 +40,10 @@ public abstract class BaseActivity<DT extends ViewDataBinding> extends AppCompat
     protected void bindToolbar() {
 
     }
-
     /**
-     * 为控件设置监听
+     * 初始化
      */
-    protected void bindListener() {
-
+    protected void initData() {
     }
     /**
      * 为控件设置监听

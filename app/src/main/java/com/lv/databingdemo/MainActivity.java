@@ -1,5 +1,7 @@
 package com.lv.databingdemo;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 
@@ -18,6 +20,9 @@ import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding> {
+    public static void startMainActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, MainActivity.class));
+    }
     private LBaseAdapter<String> mBaseAdapter;
     @Override
     protected int loadLayoutId() {

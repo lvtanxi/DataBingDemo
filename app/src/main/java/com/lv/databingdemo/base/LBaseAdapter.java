@@ -187,8 +187,10 @@ public  class LBaseAdapter<T> extends RecyclerView.Adapter<LBaseHolder> {
             default:
                 int pos = getRealPosition(baseHolder);
                 baseHolder.itemView.setTag(pos);
-                if (0 != mBindingId)
+                if (0 != mBindingId) {
                     baseHolder.getDataBinding().setVariable(mBindingId, mDatas.get(pos));
+                    //baseHolder.getDataBinding().executePendingBindings();//立即刷新需要放开
+                }
                 onBindItem(baseHolder, pos, mDatas.get(pos));
                 addAnimation(baseHolder);
                 break;
